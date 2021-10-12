@@ -11,10 +11,7 @@ def hello():
     # return 'This Compose/Flask demo has been viewed %s time(s).' % redis.get('hits')
     ip_address = flask.request.remote_addr
     visits = redis.incr('counter')
-    html = "<h3>User address: {ip_address}</h3>" \
-           "<b>Hits:</b> {visits}" \
-           "<br/>"
-    return html.format(visits=visits, ip_address=ip_address)
+    return "User address: {} Hits: {}".format(ip_address, visits)
 
 
 if __name__ == "__main__":
