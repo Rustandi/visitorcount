@@ -9,3 +9,11 @@ Install with pip:
 ```
 $ pip install -r requirements.txt
 ```
+
+## Deployment
+
+Use docker compose to build the app
+
+```
+docker-compose up -docker
+```
